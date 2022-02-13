@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    path: charts/bitnami/nginx
+    path: bitnami/nginx
     repoURL: https://github.com/luis-garza/charts.git
     targetRevision: HEAD
     helm:
