@@ -9,7 +9,8 @@ frontend:
     namespace: stack
 
 backend:
-  name: backend
+  app:
+    name: backend
   helm:
     valuesFiles:
       - values.yaml
