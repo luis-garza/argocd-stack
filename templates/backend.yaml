@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Values.backend.app.name }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: charts/bitnami/mongodb
+    repoURL: https://github.com/luis-garza/charts.git
+    targetRevision: HEAD
+    helm:
+      valueFiles: {{ .Values.backend.helm.valuesFiles }}
+  destination:
+    name: {{ .Values.backend.destination.name }}
+    namespace: {{ .Values.backend.destination.namespace }}
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,18 @@
+frontend:
+  app:
+    name: frontend
+  helm:
+    valuesFiles:
+      - values.yaml
+  destination:
+    name: in-cluster
+    namespace: stack
+
+backend:
+  name: backend
+  helm:
+    valuesFiles:
+      - values.yaml
+  destination:
+    name: in-cluster
+    namespace: stack
