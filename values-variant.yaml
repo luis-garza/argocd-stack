@@ -6,7 +6,7 @@ frontend:
       - values-variant.yaml
   destination:
     name: in-cluster
-    namespace: stack
+    namespace: stack-variant
 
 backend:
   app:
