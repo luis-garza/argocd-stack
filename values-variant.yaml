@@ -1,0 +1,19 @@
+frontend:
+  app:
+    name: frontend-variant
+  helm:
+    valuesFiles:
+      - values-variant.yaml
+  destination:
+    name: in-cluster
+    namespace: stack
+
+backend:
+  app:
+    name: backend-variant
+  helm:
+    valuesFiles:
+      - values-variant.yaml
+  destination:
+    name: in-cluster
+    namespace: stack
