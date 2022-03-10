@@ -17,5 +17,6 @@ spec:
     name: {{ .Values.backend.destination.name }}
     namespace: {{ .Values.backend.destination.namespace }}
   syncPolicy:
+    automated: {}
     syncOptions:
       - CreateNamespace=true
